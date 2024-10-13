@@ -1,0 +1,25 @@
+# Ignore macOS system files
+.DS_Store
+# Ignore data directory
+data/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore test CSV and ZIP files
+*.csv
+*.zip
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore specific Jupyter Notebook files
+notes/zip_files.ipynb
+
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore VS Code settings
+.vscode/
