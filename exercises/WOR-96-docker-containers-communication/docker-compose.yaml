@@ -1,0 +1,58 @@
+# Specify the version of Docker Compose file format
+version: '3.8'
+
+# Define the services (containers) that make up the application
+services:
+  # Database service
+  db:
+    # Use the official PostgreSQL 15 image
+    image: postgres:15
+    # Map host port 5432 to container port 5432
+    ports:
+      - '5433:5432'
+    # Connect this service to the web_network
+    networks:
+      - web_network
+    # Set environment variables for the PostgreSQL container
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    # Mount a volume to persist database data
+    volumes:
+      - db_data:/var/lib/postgresql/data    
+      - ./init-scripts:/docker-entrypoint-initdb.d
+  
+  # Web application service
+  web:
+    # Build the image using the Dockerfile in the current directory
+    build: 
+      context: . 
+      dockerfile: Dockerfile
+    # Ensure the db service is started before this service
+    depends_on:
+      - db 
+    # Set environment variables for the web application
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+    # Map host port 3000 to container port 3000
+    ports:
+      - '3000:3000'
+    # Connect this service to the web_network
+    networks:
+      - web_network
+
+# Define named volumes
+volumes:
+  # Volume for persisting database data
+  db_data:
+
+# Define custom networks
+networks:
+  # Network for connecting the web and db services
+  web_network:
+    # Use the bridge driver for this network
+    driver: bridge
