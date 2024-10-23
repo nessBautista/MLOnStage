@@ -23,3 +23,9 @@ notes/zip_files.ipynb
 
 # Ignore VS Code settings
 .vscode/
+
+# ignore node modules
+node_modules/
+
+# ignore env file
+.env
