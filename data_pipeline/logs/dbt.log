@@ -1,0 +1,30 @@
+[0m13:58:16.241120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2cdd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2cda10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2ed090>]}
+
+
+============================== 13:58:16.244189 | f6dda764-e1fc-489a-ae20-c947a7f771b0 ==============================
+[0m13:58:16.244189 [info ] [MainThread]: Running with dbt=1.8.7
+[0m13:58:16.244594 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/ness/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:58:43.269011 [debug] [MainThread]: Starter project path: /Users/ness/anaconda3/envs/aurora/lib/python3.11/site-packages/dbt/include/starter_project
+[0m13:58:43.280552 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:58:43.281488 [info ] [MainThread]: Setting up your profile.
+[0m14:02:11.067779 [info ] [MainThread]: Profile custom_postgres written to /Users/ness/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:02:11.071504 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 234.87592, "process_user_time": 0.735785, "process_kernel_time": 0.148476, "process_mem_max_rss": "103727104", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m14:02:11.072912 [debug] [MainThread]: Command `dbt init` succeeded at 14:02:11.072542 after 234.88 seconds
+[0m14:02:11.073780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10374c0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2dd250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2af0d0>]}
+[0m14:02:11.074404 [debug] [MainThread]: Flushing usage events
+[0m14:02:16.509741 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
