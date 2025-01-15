@@ -1,3 +1,5 @@
+import numpy as np
+
 class Perceptron:
     """A Perceptron classifier implementation.
 
@@ -46,3 +48,33 @@ class Perceptron:
         self.eta = eta
         self.n_iter = n_iter
         self.random_state = random_state
+
+    def net_input(self, X):
+        """Calculate net input.
+        
+        Parameters
+        ----------
+        X : array-like, shape = [n_examples, n_features]
+            Training vectors
+        
+        Returns
+        -------
+        float
+            Net input calculated as: X * W + b
+        """
+        return np.dot(X, self.w_) + self.b_
+    
+    def predict(self, X):
+        """Return class label after unit step.
+        
+        Parameters
+        ----------
+        X : array-like, shape = [n_examples, n_features]
+            Training vectors
+            
+        Returns
+        -------
+        ndarray, shape = [n_examples]
+            Predicted class labels
+        """
+        return np.where(self.net_input(X) >= 0.0, 1, 0)
