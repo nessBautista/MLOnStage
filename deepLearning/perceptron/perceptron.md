@@ -1,6 +1,6 @@
 # The perceptron
 
-![Perceptron model showing input features, weights, net input function, threshold function, and prediction](perceptron_model.png) 
+![Perceptron model showing input features, weights, net input function, threshold function, and prediction](imgs/perceptron_model.png) 
 
 The perceptron is one of the simplest forms of artificial neurons - think of it as a digital decision-maker that learns from examples. Just like how a biological neuron decides whether to fire based on input signals, a perceptron takes in information and makes a yes/no decision.
 
@@ -93,7 +93,7 @@ Without bias, the line would always pass through the origin
 
 The image below illustrates these elements:
 
-![Perceptron model showing input features, weights, net input function, threshold function, and prediction](perceptron_decision_boundary.png) 
+![Perceptron model showing input features, weights, net input function, threshold function, and prediction](imgs/perceptron_decision_boundary.png) 
 
 
 #### The boundary decision line:
@@ -137,7 +137,7 @@ When using our perceptron as a classifier, the core idea is to find the best val
 
 
 
-![perceptron_classifier](perceptron_classifier.png)
+![perceptron_classifier](imgs/perceptron_classifier.png)
 
 
 ### steps for the perceptron learning rule
