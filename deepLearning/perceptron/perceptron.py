@@ -1,3 +1,5 @@
+# perceptron.py
+
 import numpy as np
 
 class Perceptron:
