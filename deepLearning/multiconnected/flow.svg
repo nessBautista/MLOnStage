@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+    <!-- Thick Forward Arrow at Top -->
+    <path d="M100 40 L900 40" stroke="black" stroke-width="6"/>
+    <path d="M880 30 L900 40 L880 50" fill="black" stroke="black" stroke-width="2"/>
+    <text x="500" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Forward Propagation</text>
+
+    <!-- Input Box -->
+    <rect x="50" y="150" width="120" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="110" y="185" text-anchor="middle" font-family="Arial">Input X</text>
+
+    <!-- Arrow 1 -->
+    <path d="M170 180 L220 180" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Linear 1 Box -->
+    <rect x="220" y="120" width="160" height="120" fill="white" stroke="black" stroke-width="2"/>
+    <text x="300" y="145" text-anchor="middle" font-family="Arial">Linear Layer 1</text>
+    <text x="300" y="170" text-anchor="middle" font-family="Arial" font-size="12">Forward: Z = W⋅X + b</text>
+    <text x="300" y="200" text-anchor="middle" font-family="Arial" font-size="12">Backward:</text>
+    <text x="300" y="220" text-anchor="middle" font-family="Arial" font-size="12">X.grad = W.T⋅Z.grad</text>
+
+    <!-- Arrow 2 -->
+    <path d="M380 180 L430 180" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- ReLU Box -->
+    <rect x="430" y="120" width="160" height="120" fill="white" stroke="black" stroke-width="2"/>
+    <text x="510" y="145" text-anchor="middle" font-family="Arial">ReLU</text>
+    <text x="510" y="170" text-anchor="middle" font-family="Arial" font-size="12">Forward: max(0, Z)</text>
+    <text x="510" y="200" text-anchor="middle" font-family="Arial" font-size="12">Backward:</text>
+    <text x="510" y="220" text-anchor="middle" font-family="Arial" font-size="12">Z.grad[Z≤0] = 0</text>
+
+    <!-- Arrow 3 -->
+    <path d="M590 180 L640 180" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Linear 2 Box -->
+    <rect x="640" y="120" width="160" height="120" fill="white" stroke="black" stroke-width="2"/>
+    <text x="720" y="145" text-anchor="middle" font-family="Arial">Linear Layer 2</text>
+    <text x="720" y="170" text-anchor="middle" font-family="Arial" font-size="12">Forward: Z = W⋅X + b</text>
+    <text x="720" y="200" text-anchor="middle" font-family="Arial" font-size="12">Backward:</text>
+    <text x="720" y="220" text-anchor="middle" font-family="Arial" font-size="12">X.grad = W.T⋅Z.grad</text>
+
+    <!-- Arrow 4 -->
+    <path d="M800 180 L850 180" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Output Box -->
+    <rect x="850" y="120" width="120" height="120" fill="white" stroke="black" stroke-width="2"/>
+    <text x="910" y="145" text-anchor="middle" font-family="Arial">Softmax + Loss</text>
+    <text x="910" y="170" text-anchor="middle" font-family="Arial" font-size="10">Forward: ŷ = e^z/Σe^z</text>
+    <text x="910" y="190" text-anchor="middle" font-family="Arial" font-size="10">Loss = -ln(ŷ)</text>
+    <text x="910" y="210" text-anchor="middle" font-family="Arial" font-size="10">Backward:</text>
+    <text x="910" y="230" text-anchor="middle" font-family="Arial" font-size="10">grad = (ŷ - y)/batch_size</text>
+
+    <!-- Forward Pass Label -->
+    <text x="500" y="80" text-anchor="middle" font-family="Arial" font-weight="bold">Forward Pass →</text>
+
+    <!-- Backward Pass Label -->
+    <text x="500" y="300" text-anchor="middle" font-family="Arial" font-weight="bold">← Backward Pass (Gradients)</text>
+
+    <!-- Backward Arrows -->
+    <path d="M850 230 L800 230" stroke="#666" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+    <path d="M640 230 L590 230" stroke="#666" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+    <path d="M430 230 L380 230" stroke="#666" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+    <path d="M220 230 L170 230" stroke="#666" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+
+    <!-- Chain Rule Equation -->
+    <text x="500" y="400" text-anchor="middle" font-family="Arial" font-size="14" font-style="italic">Chain Rule for Backpropagation:</text>
+    <text x="500" y="430" text-anchor="middle" font-family="Arial" font-size="14">
+        ∂L/∂w^h = (∂L/∂softmax^out) · (∂softmax^out/∂z^out) · (∂z^out/∂ReLU^h) · (∂ReLU^h/∂z^h) · (∂z^h/∂w^h)
+    </text>
+
+    <!-- Arrowhead Definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+</svg>
