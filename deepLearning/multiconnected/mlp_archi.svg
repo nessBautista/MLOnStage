@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-family="Arial">Single Hidden Layer MLP Architecture</text>
+  <text x="400" y="70" text-anchor="middle" font-size="16" font-family="Arial">(Showing representative nodes only)</text>
+
+  <!-- Input Layer -->
+  <circle cx="100" cy="200" r="20" fill="#B3D7FF" stroke="black"/>
+  <circle cx="100" cy="280" r="20" fill="#B3D7FF" stroke="black"/>
+  <circle cx="100" cy="360" r="20" fill="#B3D7FF" stroke="black"/>
+  <text x="100" y="440" text-anchor="middle" font-family="Arial">784 inputs</text>
+
+  <!-- Bias node b¹ -->
+  <circle cx="250" cy="160" r="20" fill="#E6E6E6" stroke="black"/>
+  <text x="250" y="165" text-anchor="middle" font-family="Arial">b¹</text>
+  
+  <!-- Hidden Layer -->
+  <circle cx="400" cy="200" r="20" fill="#FFE5B3" stroke="black"/>
+  <circle cx="400" cy="280" r="20" fill="#FFE5B3" stroke="black"/>
+  <circle cx="400" cy="360" r="20" fill="#FFE5B3" stroke="black"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial">200 units</text>
+
+  <!-- Bias node b² -->
+  <circle cx="550" cy="160" r="20" fill="#E6E6E6" stroke="black"/>
+  <text x="550" y="165" text-anchor="middle" font-family="Arial">b²</text>
+
+  <!-- Output Layer -->
+  <circle cx="700" cy="200" r="20" fill="#FFB3B3" stroke="black"/>
+  <circle cx="700" cy="280" r="20" fill="#FFB3B3" stroke="black"/>
+  <circle cx="700" cy="360" r="20" fill="#FFB3B3" stroke="black"/>
+  <text x="700" y="440" text-anchor="middle" font-family="Arial">24 outputs</text>
+
+  <!-- Connections from input to hidden layer -->
+  <g stroke="#CCCCCC" stroke-width="1">
+    <line x1="120" y1="200" x2="380" y2="200"/>
+    <line x1="120" y1="200" x2="380" y2="280"/>
+    <line x1="120" y1="200" x2="380" y2="360"/>
+    
+    <line x1="120" y1="280" x2="380" y2="200"/>
+    <line x1="120" y1="280" x2="380" y2="280"/>
+    <line x1="120" y1="280" x2="380" y2="360"/>
+    
+    <line x1="120" y1="360" x2="380" y2="200"/>
+    <line x1="120" y1="360" x2="380" y2="280"/>
+    <line x1="120" y1="360" x2="380" y2="360"/>
+  </g>
+
+  <!-- Bias connections to hidden layer -->
+  <g stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4">
+    <line x1="270" y1="160" x2="380" y2="200"/>
+    <line x1="270" y1="160" x2="380" y2="280"/>
+    <line x1="270" y1="160" x2="380" y2="360"/>
+  </g>
+
+  <!-- Connections from hidden to output layer -->
+  <g stroke="#CCCCCC" stroke-width="1">
+    <line x1="420" y1="200" x2="680" y2="200"/>
+    <line x1="420" y1="200" x2="680" y2="280"/>
+    <line x1="420" y1="200" x2="680" y2="360"/>
+    
+    <line x1="420" y1="280" x2="680" y2="200"/>
+    <line x1="420" y1="280" x2="680" y2="280"/>
+    <line x1="420" y1="280" x2="680" y2="360"/>
+    
+    <line x1="420" y1="360" x2="680" y2="200"/>
+    <line x1="420" y1="360" x2="680" y2="280"/>
+    <line x1="420" y1="360" x2="680" y2="360"/>
+  </g>
+
+  <!-- Bias connections to output layer -->
+  <g stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4">
+    <line x1="570" y1="160" x2="680" y2="200"/>
+    <line x1="570" y1="160" x2="680" y2="280"/>
+    <line x1="570" y1="160" x2="680" y2="360"/>
+  </g>
+
+  <!-- Weight Labels -->
+  <text x="250" y="240" font-family="Arial" font-style="italic">W¹</text>
+  <text x="550" y="240" font-family="Arial" font-style="italic">W²</text>
+
+  <!-- Layer Labels -->
+  <text x="400" y="150" text-anchor="middle" font-family="Arial">ReLU</text>
+  <text x="700" y="150" text-anchor="middle" font-family="Arial">Softmax</text>
+
+  <!-- Equations -->
+  <text x="400" y="470" text-anchor="middle" font-family="Arial" font-size="14">z¹ = W¹X + b¹</text>
+  <text x="400" y="490" text-anchor="middle" font-family="Arial" font-size="14">a¹ = ReLU(z¹)</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Arial" font-size="14">z² = W²a¹ + b²</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Arial" font-size="14">ŷ = softmax(z²)</text>
+</svg>

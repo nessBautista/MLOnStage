@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 600" width="1200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background - adjusted width -->
+    <rect x="0" y="0" width="1200" height="600" fill="#f8f9fa"/>
+    
+    <!-- Data processing Box -->
+    <rect x="50" y="50" width="150" height="80" fill="#ffffff" stroke="#343a40" stroke-width="2" rx="5"/>
+    <text x="70" y="90" font-family="Arial" font-size="14" fill="#212529">Data processing</text>
+    
+    <!-- Sequential Layer Container Box - adjusted position -->
+    <rect x="250" y="50" width="700" height="200" fill="#ffffff" stroke="#343a40" stroke-width="2" rx="5"/>
+    <text x="270" y="80" font-family="Arial" font-size="18" fill="#212529">Sequential_layers (1)</text>
+    
+    <!-- Sequential_layers children -->
+    <rect x="300" y="100" width="160" height="100" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="320" y="130" font-family="Arial" font-size="16" fill="#212529">Linear Layer (2)</text>
+    <text x="320" y="150" font-family="Arial" font-size="12" fill="#495057">input_size: 784</text>
+    <text x="320" y="170" font-family="Arial" font-size="12" fill="#495057">output_size: 200</text>
+    
+    <rect x="520" y="100" width="120" height="100" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="550" y="150" font-family="Arial" font-size="16" fill="#212529">ReLU (3)</text>
+    
+    <rect x="700" y="100" width="160" height="100" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="720" y="130" font-family="Arial" font-size="16" fill="#212529">Linear Layer (2)</text>
+    <text x="720" y="150" font-family="Arial" font-size="12" fill="#495057">input_size: 200</text>
+    <text x="720" y="170" font-family="Arial" font-size="12" fill="#495057">output_size: 24</text>
+    
+    <!-- SoftmaxXEntropy Box -->
+    <rect x="1000" y="100" width="150" height="80" fill="#ffffff" stroke="#343a40" stroke-width="2" rx="5"/>
+    <text x="1020" y="145" font-family="Arial" font-size="12" fill="#212529">softmaxXEntropy (4)</text>
+    
+    <!-- Training Process Box -->
+    <rect x="50" y="280" width="700" height="80" fill="#ffffff" stroke="#343a40" stroke-width="2" rx="5"/>
+    <text x="70" y="310" font-family="Arial" font-size="18" fill="#212529">Training Process</text>
+    
+    <!-- Train and Accuracy boxes - adjusted to fit within parent box -->
+    <rect x="70" y="320" width="120" height="30" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="100" y="340" font-family="Arial" font-size="16" fill="#212529">train (5)</text>
+    
+    <rect x="200" y="320" width="120" height="30" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="220" y="340" font-family="Arial" font-size="16" fill="#212529">accuracy (6)</text>
+
+    <!-- Monitoring and Evaluation Box -->
+    <rect x="50" y="380" width="700" height="80" fill="#ffffff" stroke="#343a40" stroke-width="2" rx="5"/>
+    <text x="70" y="410" font-family="Arial" font-size="18" fill="#212529">Monitoring and Evaluation</text>
+    
+    <!-- Plot Training Progress Box -->
+    <rect x="70" y="420" width="200" height="30" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="5"/>
+    <text x="90" y="440" font-family="Arial" font-size="14" fill="#212529">plot_training_progress (7)</text>
+
+    <!-- Connecting Arrows -->
+    <path d="M 200 90 L 240 90" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M 460 150 L 510 150" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M 640 150 L 690 150" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M 860 150 L 990 150" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Connecting Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+        </marker>
+    </defs>
+</svg>
