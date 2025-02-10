@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Input Image -->
+    <rect x="50" y="100" width="80" height="80" fill="#ADD8E6" stroke="black"/>
+    <text x="70" y="145" font-size="14" font-family="Arial">Input</text>
+    
+    <!-- First Convolution Layer -->
+    <rect x="190" y="100" width="80" height="80" fill="#90EE90" stroke="black"/>
+    <text x="185" y="200" font-size="14" font-family="Arial">Conv1+ReLU</text>
+    
+    <!-- First Pooling Layer -->
+    <rect x="330" y="115" width="50" height="50" fill="#90EE90" stroke="black"/>
+    <text x="340" y="200" font-size="14" font-family="Arial">Pool</text>
+
+    <!-- Second Convolution Layer -->
+    <rect x="440" y="100" width="80" height="80" fill="#90EE90" stroke="black"/>
+    <text x="435" y="200" font-size="14" font-family="Arial">Conv2+ReLU</text>
+    
+    <!-- Second Pooling Layer -->
+    <rect x="580" y="115" width="50" height="50" fill="#90EE90" stroke="black"/>
+    <text x="590" y="200" font-size="14" font-family="Arial">Pool</text>
+    
+    <!-- Flatten -->
+    <rect x="680" y="100" width="20" height="80" fill="#90EE90" stroke="black"/>
+    <text x="670" y="200" font-size="14" font-family="Arial">Flatten</text>
+    
+    <!-- First Fully Connected + ReLU -->
+    <g transform="translate(750,70)">
+        <!-- All-to-all connections -->
+        <g opacity="0.2">
+            <!-- Generate connections from each input to each output -->
+            <path d="M0 0 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 20 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 40 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 60 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 80 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 80 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 80 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 80 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 80 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 100 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 100 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 100 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 100 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 100 L50 80" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 120 L50 0" stroke="black" stroke-width="0.5"/>
+            <path d="M0 120 L50 20" stroke="black" stroke-width="0.5"/>
+            <path d="M0 120 L50 40" stroke="black" stroke-width="0.5"/>
+            <path d="M0 120 L50 60" stroke="black" stroke-width="0.5"/>
+            <path d="M0 120 L50 80" stroke="black" stroke-width="0.5"/>
+        </g>
+        <!-- Input nodes -->
+        <circle cx="0" cy="0" r="4" fill="red"/>
+        <circle cx="0" cy="20" r="4" fill="red"/>
+        <circle cx="0" cy="40" r="4" fill="red"/>
+        <circle cx="0" cy="60" r="4" fill="red"/>
+        <circle cx="0" cy="80" r="4" fill="red"/>
+        <circle cx="0" cy="100" r="4" fill="red"/>
+        <circle cx="0" cy="120" r="4" fill="red"/>
+        <!-- Output nodes -->
+        <circle cx="50" cy="0" r="4" fill="blue"/>
+        <circle cx="50" cy="20" r="4" fill="blue"/>
+        <circle cx="50" cy="40" r="4" fill="blue"/>
+        <circle cx="50" cy="60" r="4" fill="blue"/>
+        <circle cx="50" cy="80" r="4" fill="blue"/>
+        <text x="0" y="150" font-size="14" font-family="Arial">FC1 + ReLU</text>
+    </g>
+
+    <!-- Dropout -->
+    <rect x="850" y="90" width="40" height="100" fill="#D3D3D3" stroke="black" stroke-dasharray="4"/>
+    <text x="845" y="210" font-size="14" font-family="Arial">Dropout</text>
+
+    <!-- Second Fully Connected -->
+    <g transform="translate(940,85)">
+        <!-- All-to-all connections -->
+        <g opacity="0.2">
+            <path d="M0 0 L50 10" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 30" stroke="black" stroke-width="0.5"/>
+            <path d="M0 0 L50 50" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 20 L50 10" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 30" stroke="black" stroke-width="0.5"/>
+            <path d="M0 20 L50 50" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 40 L50 10" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 30" stroke="black" stroke-width="0.5"/>
+            <path d="M0 40 L50 50" stroke="black" stroke-width="0.5"/>
+            
+            <path d="M0 60 L50 10" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 30" stroke="black" stroke-width="0.5"/>
+            <path d="M0 60 L50 50" stroke="black" stroke-width="0.5"/>
+        </g>
+        <!-- Input nodes -->
+        <circle cx="0" cy="0" r="4" fill="blue"/>
+        <circle cx="0" cy="20" r="4" fill="blue"/>
+        <circle cx="0" cy="40" r="4" fill="blue"/>
+        <circle cx="0" cy="60" r="4" fill="blue"/>
+        <!-- Output nodes -->
+        <circle cx="50" cy="10" r="4" fill="orange"/>
+        <circle cx="50" cy="30" r="4" fill="orange"/>
+        <circle cx="50" cy="50" r="4" fill="orange"/>
+        <text x="15" y="80" font-size="14" font-family="Arial">FC2</text>
+    </g>
+    
+    <!-- Output -->
+    <rect x="1040" y="100" width="60" height="80" fill="#FFA07A" stroke="black"/>
+    <text x="1000" y="200" font-size="14" font-family="Arial">CrossEntropyLoss</text>
+    
+    <!-- Connecting Lines -->
+    <path d="M130 140 L190 140" stroke="black" stroke-width="1.5"/>
+    <path d="M270 140 L330 140" stroke="black" stroke-width="1.5"/>
+    <path d="M380 140 L440 140" stroke="black" stroke-width="1.5"/>
+    <path d="M520 140 L580 140" stroke="black" stroke-width="1.5"/>
+    <path d="M630 140 L680 140" stroke="black" stroke-width="1.5"/>
+    <path d="M700 140 L750 140" stroke="black" stroke-width="1.5"/>
+    <path d="M800 140 L850 140" stroke="black" stroke-width="1.5"/>
+    <path d="M890 140 L940 140" stroke="black" stroke-width="1.5"/>
+    <path d="M990 140 L1040 140" stroke="black" stroke-width="1.5"/>
+</svg>
